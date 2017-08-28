@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+	<!-- 	define action -->
+	
+	<action name="product" class="gdp.cmc.action.BookAction" method="getAllBook">
+		<result name="success">product.jsp</result>
+		<result name="error">index.jsp</result>
+	</action>
+	<action name="checkLogin" class="gdp.cmc.action.UserAction" method="checkLogin">
+		<result name="success">index.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+	<action name="login">
+		<result>login.jsp</result>
+	</action>
+	</package>
+</struts>
