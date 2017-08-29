@@ -34,7 +34,10 @@
 		 	
 		  	<s:iterator value="list">
 		  		<div class="product-grid love-grid">
-		  			<a href="">
+		  			<s:url action="detail" var="bookDetail">
+		  				<s:param name="id"><s:property value="bookId"/></s:param>
+		  			</s:url>
+		  			<a href="${bookDetail}">
 		  				<div class="product-img b-link-stripe b-animate-go  thickbox">
 		  					<img src="${pageContext.request.contextPath}/public/images/<s:property value="images" />" class="img-responsive" alt=""/>
 		  				</div>
