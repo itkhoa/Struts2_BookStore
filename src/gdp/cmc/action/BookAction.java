@@ -36,7 +36,6 @@ public class BookAction {
   public String getAllBook() throws ClassNotFoundException, SQLException {
     BookBus bookBus = new BookBus();
     this.list = bookBus.getAllBook();
-    this.list.get(1).getAuthorName();
     return "success";
   }
   
@@ -45,5 +44,14 @@ public class BookAction {
     System.out.println(id);
     book = bookBus.getBookById(Integer.parseInt(id));
     return "success";
+  }
+  public String insertBook() throws ClassNotFoundException, SQLException {
+    BookBus bookBus = new BookBus();
+    System.out.println(book.getTitle());
+    if (bookBus.insert(book)) {
+      return "success";
+    } else {
+      return "error";
+    }
   }
 }

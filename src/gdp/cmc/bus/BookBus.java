@@ -19,4 +19,9 @@ public class BookBus {
     BookDao bookDao = new BookDao();
     return bookDao.getItemById(id);
   }
+  
+  public boolean insert (Book book) throws ClassNotFoundException, SQLException {
+    BookDao bookDao = new BookDao();
+    return bookDao.insert(book);
+  }
 }

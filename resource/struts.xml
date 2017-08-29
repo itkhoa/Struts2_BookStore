@@ -26,5 +26,15 @@
 		<action name="detail" class="gdp.cmc.action.BookAction" method="getBookById">
 			<result name="success">detail.jsp</result>
 		</action>
+		<action name="access">
+			<result>admin/access.jsp</result>
+		</action>
+		<action name="insert">
+			<result>admin/insert.jsp</result>
+		</action>
+		<action name="insertData" class="gdp.cmc.action.BookAdminAction" method="execute">
+			<result name="success">admin/insert.jsp</result>
+			<result name="error">admin/insert.jsp</result>
+		</action>
 	</package>
 </struts>

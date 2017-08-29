@@ -32,6 +32,7 @@
 				<p>Welcome, please enter the following to continue</p>
 				<p>If you have previously Login with us, <span>click here</span></p>
 				<s:form action="checkLogin" method="post">
+			
 					<div class="form-group">
 						<s:textfield name="user.email" label="Email" class="form-control"/>
 					</div>

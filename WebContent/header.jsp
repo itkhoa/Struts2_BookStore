@@ -15,10 +15,10 @@
 						<li><a href=""><s:property value="#session.email"/></a></li>
 						<li><a href="<s:url action='logout'/>">Log Out</a></li>
 					</s:if>
-					<s:if test="%{!#session.logined}">
+					<s:else>
 						<li class="top_link"><a href="">Sign Up</a></li>
 						<li><a href="<s:url action='login'/>">Log In</a></li>
-					</s:if>
+					</s:else>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
