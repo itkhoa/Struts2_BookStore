@@ -13,7 +13,7 @@
 				<ul>
 					<s:if test="%{#session.logined}" >
 						<li><a href=""><s:property value="#session.email"/></a></li>
-						<li><a href="">Log Out</a></li>
+						<li><a href="<s:url action='logout'/>">Log Out</a></li>
 					</s:if>
 					<s:if test="%{!#session.logined}">
 						<li class="top_link"><a href="">Sign Up</a></li>

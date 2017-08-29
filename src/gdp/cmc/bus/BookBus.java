@@ -14,4 +14,9 @@ public class BookBus {
     list =  bookDao.getAllBook();
     return list;
   } 
+  
+  public Book getBookById(int id) throws ClassNotFoundException, SQLException {
+    BookDao bookDao = new BookDao();
+    return bookDao.getItemById(id);
+  }
 }

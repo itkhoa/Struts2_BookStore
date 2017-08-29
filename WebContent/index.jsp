@@ -13,6 +13,8 @@
 <!-- layout -->
 <link rel="stylesheet" type="text/css" href="<s:url value="/public/css/main.css"/>"/>
 <link rel="stylesheet" type="text/css" href="<s:url value="/public/css/menu.css"/>"/>
+<!-- icon -->
+<link rel="icon" href="${pageContext.request.contextPath}/public/favicon.ico">
 </head>
 <body>
 	<!-- header -->

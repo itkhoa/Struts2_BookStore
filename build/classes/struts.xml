@@ -6,16 +6,25 @@
 	<package name="default" extends="struts-default" namespace="/">
 	<!-- 	define action -->
 	
-	<action name="product" class="gdp.cmc.action.BookAction" method="getAllBook">
-		<result name="success">product.jsp</result>
-		<result name="error">index.jsp</result>
-	</action>
-	<action name="checkLogin" class="gdp.cmc.action.UserAction" method="checkLogin">
-		<result name="success">index.jsp</result>
-		<result name="error">login.jsp</result>
-	</action>
-	<action name="login">
-		<result>login.jsp</result>
-	</action>
+		<action name="product" class="gdp.cmc.action.BookAction" method="getAllBook">
+			<result name="success">product.jsp</result>
+			<result name="error">index.jsp</result>
+		</action>
+		<action name="detail" class="gdp.cmc.action.BookAction" method="getBookById">
+			<result name="success">detail.jsp</result>
+		</action>
+		<action name="checkLogin" class="gdp.cmc.action.UserAction" method="checkLogin">
+			<result name="success">index.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<action name="login">
+			<result>login.jsp</result>
+		</action>
+		<action name="logout" class="gdp.cmc.action.UserAction" method="logout">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="detail" class="gdp.cmc.action.BookAction" method="getBookById">
+			<result name="success">detail.jsp</result>
+		</action>
 	</package>
 </struts>

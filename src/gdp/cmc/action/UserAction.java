@@ -33,4 +33,13 @@ public class UserAction {
       return "error";
     }
   }
+  
+  public String logout () {
+    Map<String, Object> session = (Map<String, Object>) ActionContext.getContext().getSession();
+    System.out.println("Logout");
+    session.remove("logined");
+    session.remove("context");
+    session.remove("email");
+    return "success";
+  }
 }
