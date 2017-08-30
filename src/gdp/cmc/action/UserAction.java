@@ -10,19 +10,32 @@ import gdp.cmc.bus.UserBus;
 import gdp.cmc.model.User;
 
 public class UserAction {
-  private User user;
   
-  public User getUser() {
-    return user;
+  private String email;
+  private String password;
+  
+  public String getEmail() {
+    return email;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public String checkLogin () throws ClassNotFoundException, SQLException {
     UserBus userBus = new UserBus();
-    System.out.println(user.getEmail());
+    User user = new User();
+    user.setEmail(email);
+    user.setPassword(password);
+    System.out.println(email);
     if (userBus.login(user.getEmail(), user.getPassword())) {
       Map<String, Object> session = (Map<String, Object>) ActionContext.getContext().getSession();
       ((Map<String,Object>) session).put("logined", "true");

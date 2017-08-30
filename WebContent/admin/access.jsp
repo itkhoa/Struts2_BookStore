@@ -12,21 +12,19 @@
 <script src="${pageContext.request.contextPath}/public/plugin/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/public/plugin/bootstrap/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/public/plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
 <!--  -->
-<link rel="stylesheet" type="text/css" href="public/css/login.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/login.css"/>
 <!-- icon -->
 <link rel="icon" href="${pageContext.request.contextPath}/public/favicon.ico">
 </head>
 <body class="login">
 	<div class="logo">
 	</div>
-	<div class="content" style="width: 400px; align: center;">
-		<form method="post" action="">
+	<div class="content">
+	
+		<form method="post" action="/admin/loginAccess">
 			<h3 class="form-title font-green">Sign In</h3>
-            <%-- <div class="alert alert-danger display-hide">
-            	<button class="close" data-close="alert"></button>
-                <span> Enter any username and password. </span>
-            </div> --%>
             <div class="form-group">
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
             	<label class="control-label visible-ie8 visible-ie9">Username</label>
@@ -41,5 +39,8 @@
             </div>
 		</form>
 	</div>
+	<script src="${pageContext.request.contextPath}/public/plugin/jquery-validation/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="${pageContext.request.contextPath}/public/plugin/jquery-validation/additional-methods.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/login.js"></script>
 </body>
 </html>

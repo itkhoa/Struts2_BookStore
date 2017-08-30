@@ -30,17 +30,19 @@
 			<h2>Log In</h2>
 			<div class="col-md-6 log">
 				<p>Welcome, please enter the following to continue</p>
-				<p>If you have previously Login with us, <span>click here</span></p>
-				<s:form action="checkLogin" method="post">
-			
+				<p>If you have previously Login with us, <a href="#">click here</a></p>
+				<form action="checkLogin" method="post">
 					<div class="form-group">
-						<s:textfield name="user.email" label="Email" class="form-control"/>
+						<label>Email</label>
+						<input type="text" class="form-control" name="email"/>
 					</div>
 					<div class="form-group">
-						<s:password name="user.password" label="Password" class="form-control"/>
+						<label>Password</label>
+						<input type="password" class="form-control" name="password"/>
 					</div>
-					<s:submit/>
-				</s:form>
+					<button type="submit" class="btn btn-primary">Log In</button>
+					<button type="reset" class="btn btn-default">Cancel</button>
+				</form>
 			</div>
 		</div>
 	</div>

@@ -5,7 +5,7 @@
 <struts>
 	<package name="default" extends="struts-default" namespace="/">
 	<!-- 	define action -->
-	
+		
 		<action name="product" class="gdp.cmc.action.BookAction" method="getAllBook">
 			<result name="success">product.jsp</result>
 			<result name="error">index.jsp</result>
@@ -26,11 +26,17 @@
 		<action name="detail" class="gdp.cmc.action.BookAction" method="getBookById">
 			<result name="success">detail.jsp</result>
 		</action>
+	</package>
+	<package name="admin" namespace="/admin" extends="struts-default">
 		<action name="access">
-			<result>admin/access.jsp</result>
+			<result>/admin/access.jsp</result>
+		</action>
+		<action name="loginAccess" class="gdp.cmc.action.AccessAction" method="execute">
+			<result name="success">/admin/index.jsp</result>
+			<result name="error">/admin/access.jsp</result>
 		</action>
 		<action name="insert">
-			<result>admin/insert.jsp</result>
+			<result>/admin/insert.jsp</result>
 		</action>
 		<action name="insertData" class="gdp.cmc.action.BookAdminAction" method="execute">
 			<result name="success">admin/insert.jsp</result>
