@@ -45,5 +45,11 @@ public class TestBook {
     Book expect = null;
     assertEquals(expect, actual);
   }
-
+  @Test
+  public void testGetAllBook() throws NumberFormatException, ClassNotFoundException, SQLException {
+    BookBus bookBus = new BookBus();
+    int actual = bookBus.getAllBook().size();
+    int expect = 6;
+    assertEquals(expect, actual);
+  }
 }
