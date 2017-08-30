@@ -1,11 +1,13 @@
 package gdp.cmc.action;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import gdp.cmc.bus.BookBus;
 import gdp.cmc.model.Book;
 
 public class BookAdminAction {
+  private List<Book> list;
   private int bookId;
   
   private String title;
@@ -25,6 +27,15 @@ public class BookAdminAction {
   private String publishName;
   
   private String typeName;
+  
+
+  public List<Book> getList() {
+    return list;
+  }
+
+  public void setList(List<Book> list) {
+    this.list = list;
+  }
 
   public int getBookId() {
     return bookId;
@@ -105,8 +116,13 @@ public class BookAdminAction {
   public void setTypeName(String typeName) {
     this.typeName = typeName;
   }
-  
   public String execute() throws ClassNotFoundException, SQLException {
+    BookBus bookBus = new BookBus();
+    list = bookBus.getAllBook();
+    return "success";
+  }
+  
+  public String insert() throws ClassNotFoundException, SQLException {
     System.out.println(title);
     Book book = new Book();
     book.setTitle(title);
@@ -125,5 +141,6 @@ public class BookAdminAction {
       return "error";
     }
   }
+  
   
 }

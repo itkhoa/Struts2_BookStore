@@ -14,8 +14,12 @@
 			<result name="success">detail.jsp</result>
 		</action>
 		<action name="checkLogin" class="gdp.cmc.action.UserAction" method="checkLogin">
-			<result name="success">index.jsp</result>
-			<result name="error">login.jsp</result>
+			<result name="success" type="redirect">
+				<param name="location">index.jsp</param>
+			</result>
+			<result name="error">
+				<param name="location">login.jsp</param>
+			</result>
 		</action>
 		<action name="login">
 			<result>login.jsp</result>
@@ -35,11 +39,17 @@
 			<result name="success">/admin/index.jsp</result>
 			<result name="error">/admin/access.jsp</result>
 		</action>
+		<action name="index" class="gdp.cmc.action.BookAdminAction" method="execute">
+			<result name="success">/addmin/index.jsp</result>
+		</action>
 		<action name="insert">
 			<result>/admin/insert.jsp</result>
 		</action>
-		<action name="insertData" class="gdp.cmc.action.BookAdminAction" method="execute">
-			<result name="success">admin/insert.jsp</result>
+		<action name="insertData" class="gdp.cmc.action.BookAdminAction" method="insert">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/admin</param>
+			</result>
 			<result name="error">admin/insert.jsp</result>
 		</action>
 	</package>

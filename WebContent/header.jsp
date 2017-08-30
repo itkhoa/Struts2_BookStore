@@ -35,7 +35,7 @@
 
 			<div class="top-nav">
 				<ul class="memenu skyblue">
-					<li class="active"><a href="">Home</a></li>
+					<li class="active"><a href="index.jsp">Home</a></li>
 					<li class="grid"><a href="<s:url action='product'/>">All Books</a></li>
 					<li class="grid"><a href="#">Catogories</a></li>
 					<li class="grid"><a href="#">Economic</a></li>
