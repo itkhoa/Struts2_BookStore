@@ -27,22 +27,31 @@
 				<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 				<li class="breadcrumb-item active">Login</li>
 			</ol>
-			<h2>Log In</h2>
-			<div class="col-md-6 log">
-				<p>Welcome, please enter the following to continue</p>
-				<p>If you have previously Login with us, <a href="#">click here</a></p>
-				<form action="checkLogin" method="post">
-					<div class="form-group">
-						<label>Email</label>
-						<input type="text" class="form-control" name="email"/>
+			<div class="rows">
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h2>Log In</h2>
+						</div>
+						<div class="panel-body">
+							<form action="checkLogin" method="post">
+								<div class="form-group">
+									<label>Email</label>
+									<input type="text" class="form-control" name="email"/>
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password" class="form-control" name="password"/>
+								</div>
+								<button type="submit" class="btn btn-primary">Log In</button>
+								<button type="reset" class="btn btn-default">Cancel</button>
+							</form>
+						</div>
+						<div class="panel-footer">
+							<a href="">Forgot password</a>
+						</div>
 					</div>
-					<div class="form-group">
-						<label>Password</label>
-						<input type="password" class="form-control" name="password"/>
-					</div>
-					<button type="submit" class="btn btn-primary">Log In</button>
-					<button type="reset" class="btn btn-default">Cancel</button>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
